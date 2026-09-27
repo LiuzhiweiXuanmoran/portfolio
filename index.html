@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刘志伟 · 个人作品集</title>
+  <meta name="description" content="刘志伟的个人作品集 —— 软件工程学生，Web 前端方向，展示个人技能与项目作品。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ===== 左侧固定介绍区 ===== -->
+    <aside class="sidebar">
+      <header class="profile">
+        <div class="brand-mark">刘</div>
+        <h1 class="name">刘志伟</h1>
+        <p class="tagline">软件工程学生 · Web 前端方向</p>
+        <p class="bio">
+          广州软件学院在读，现居广州。主要关注 Web 前端开发与原生网页构建，
+          常用 HTML、CSS、JavaScript 与 Python 进行项目开发。
+        </p>
+      </header>
+
+      <section class="skills" aria-label="技能方向">
+        <h2 class="side-title">技能方向</h2>
+        <div class="skill-group">
+          <p class="skill-label">前端开发</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">编程语言</p>
+          <ul>
+            <li>Python</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="nav" aria-label="页面导航">
+        <a href="#work" class="active"><span>01</span>项目作品</a>
+        <a href="#about"><span>02</span>关于我</a>
+        <a href="#contact"><span>03</span>联系我</a>
+      </nav>
+
+      <footer class="side-footer">
+        <a class="side-mail" href="mailto:17802033004@136.com">17802033004@136.com</a>
+        <p>© <span id="year">2026</span> 刘志伟</p>
+      </footer>
+    </aside>
+
+    <!-- ===== 右侧滚动主内容区 ===== -->
+    <main class="main">
+
+      <!-- 开场区 -->
+      <section class="hero">
+        <p class="hero-kicker reveal">PORTFOLIO / 2026</p>
+        <h2 class="hero-title reveal">把想法<br><em>变成作品</em></h2>
+        <p class="hero-lead reveal">
+          我是刘志伟，软件工程专业学生，专注于 Web 前端开发与原生网页构建。
+          我相信好的代码和好的设计一样，都始于对细节的认真 ——
+          这里收录了我在学习与实践中打磨出的项目作品。
+        </p>
+      </section>
+
+      <!-- 01 项目作品 -->
+      <section class="section" id="work">
+        <div class="section-head reveal">
+          <span class="section-no">01</span>
+          <div>
+            <h2>项目作品</h2>
+            <p class="section-en">SELECTED WORKS</p>
+          </div>
+        </div>
+        <!-- 项目由 script.js 数据驱动渲染 -->
+        <div id="project-list"></div>
+      </section>
+
+      <!-- 02 关于我 -->
+      <section class="section" id="about">
+        <div class="section-head reveal">
+          <span class="section-no">02</span>
+          <div>
+            <h2>关于我</h2>
+            <p class="section-en">ABOUT ME</p>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item reveal">
+            <p class="timeline-date">教育经历</p>
+            <h3>广州软件学院 · 软件工程（本科在读）</h3>
+            <p>当前方向为 Web 前端开发与响应式页面构建，在系统学习专业课程的同时，通过实际项目锻炼工程能力。</p>
+          </li>
+          <li class="timeline-item reveal">
+            <p class="timeline-date">项目实践</p>
+            <h3>个人项目开发</h3>
+            <p>先后完成个人作品集网站、Python 数据抓取脚本等项目，熟悉从需求分析、开发到上线的完整流程。</p>
+          </li>
+          <li class="timeline-item reveal">
+            <p class="timeline-date">持续学习</p>
+            <h3>正在深入的方向</h3>
+            <p>响应式页面设计、交互实现与数据处理。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 03 联系我 -->
+      <section class="section section-contact" id="contact">
+        <div class="section-head reveal">
+          <span class="section-no">03</span>
+          <div>
+            <h2>联系我</h2>
+            <p class="section-en">GET IN TOUCH</p>
+          </div>
+        </div>
+        <p class="contact-note reveal">如果你对我的项目感兴趣，或者有实习与协作机会，欢迎随时联系我。</p>
+        <a class="contact-mail reveal" href="mailto:17802033004@136.com">17802033004@136.com</a>
+        <ul class="contact-list reveal">
+          <li><span>微信</span>a17802033004</li>
+          <li><span>所在地</span>中国·广州</li>
+        </ul>
+      </section>
+
+      <footer class="main-footer">
+        <p>Designed &amp; Built by 刘志伟</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
