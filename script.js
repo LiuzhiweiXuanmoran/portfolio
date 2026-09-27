@@ -76,3 +76,27 @@ document.querySelectorAll(".reveal").forEach(el => revealer.observe(el));
 
 /* ================= 页脚年份 ================= */
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ================= 深浅色主题切换 =================
+   使用 localStorage 记住用户上一次选择，刷新后保持主题不变。 */
+const THEME_KEY = "theme";
+const themeToggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+  themeToggle.title = theme === "dark" ? "切换到浅色主题" : "切换到深色主题";
+}
+
+const savedTheme = localStorage.getItem(THEME_KEY);
+if (savedTheme === "dark" || savedTheme === "light") {
+  applyTheme(savedTheme); // 恢复上一次选择的主题
+} else {
+  themeToggle.title = "切换到深色主题"; // 默认浅色，保持 HTML 初始状态
+}
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+});
